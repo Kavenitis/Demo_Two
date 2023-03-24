@@ -1,0 +1,68 @@
+.party-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.player-party, .enemy-party {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-character-1, .player-character-2, .player-character-3, .player-character-4,
+.enemy-character-1, .enemy-character-2, .enemy-character-3, .enemy-character-4 {
+  display: inline-block;
+  width: 155px;
+  height: 155px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.player-party .player-character-1,
+.player-party .player-character-2,
+.player-party .player-character-3,
+.player-party .player-character-4 {
+  background-color: lightgreen;
+}
+
+.enemy-party .enemy-character-1,
+.enemy-party .enemy-character-2,
+.enemy-party .enemy-character-3,
+.enemy-party .enemy-character-4 {
+  background-color: salmon;
+}
+
+.character-0-hp {
+  background-color: gray;
+  color: white;
+}
+
+.character-animating {
+  animation: animating 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes animating {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+ .health-bar {
+   height: 20px;
+   width: 100%;
+   background-color: #ddd;
+ }
+
+ .health-bar-fill {
+   height: 100%;
+   background-color: green;
+   transition: width 0.2s ease-in-out;
+ }
+}
