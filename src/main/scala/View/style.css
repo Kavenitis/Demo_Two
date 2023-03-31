@@ -1,7 +1,7 @@
 .party-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .player-party, .enemy-party {
@@ -10,59 +10,68 @@
   align-items: center;
 }
 
-.player-character-1, .player-character-2, .player-character-3, .player-character-4,
-.enemy-character-1, .enemy-character-2, .enemy-character-3, .enemy-character-4 {
-  display: inline-block;
-  width: 155px;
+.player-character{
+  width: 200px;
   height: 155px;
-  margin: 10px;
+  margin: 100px;
   border-radius: 50%;
-  background-color: lightblue;
+  background-color: green;
   text-align: center;
-  line-height: 100px;
+  line-height: 70px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.player-party .player-character-1,
-.player-party .player-character-2,
-.player-party .player-character-3,
-.player-party .player-character-4 {
-  background-color: lightgreen;
+.enemy-character{
+  display: inline-block;
+  width: 200px;
+  height: 155px;
+  margin: 100px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.enemy-character-1{
+ background-color: grey;
+
 }
 
-.enemy-party .enemy-character-1,
-.enemy-party .enemy-character-2,
-.enemy-party .enemy-character-3,
-.enemy-party .enemy-character-4 {
-  background-color: salmon;
+
+.character-name {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.character-0-hp {
-  background-color: gray;
-  color: white;
+
+.health-bar {
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
 }
 
-.character-animating {
-  animation: animating 0.5s ease-in-out alternate infinite;
+
+.health-value {
+    font-size: 1.2em;
+    margin-left: 10px;
 }
 
-@keyframes animating {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
- .health-bar {
-   height: 20px;
-   width: 100%;
-   background-color: #ddd;
- }
 
- .health-bar-fill {
-   height: 100%;
-   background-color: green;
-   transition: width 0.2s ease-in-out;
- }
+.action-button {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.action-button:hover {
+    background-color: #3e8e41;
 }
